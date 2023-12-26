@@ -1,12 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View ,StatusBar} from 'react-native';
+import StackNavigator from './StackNavigator';
+import { UserContext } from './UserContext';
+import 'react-native-get-random-values';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+   <>
+     <UserContext>
+      <StatusBar backgroundColor='black'/>
+       <StackNavigator/>
+     </UserContext>
+   </>
   );
 }
 
