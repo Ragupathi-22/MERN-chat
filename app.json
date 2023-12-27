@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "messenger-project",
+    "name": "Swift-chat",
     "slug": "messenger-project",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon1.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",

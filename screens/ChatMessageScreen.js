@@ -247,9 +247,9 @@ const ChatMessageScreen = () => {
             headerRight: () => selectMessages.length > 0 ?
 
                 <View style={{ flexDirection: "row", gap: 20, alignItems: 'center' }}>
-                    <Ionicons name="md-arrow-undo" size={24} color="black" />
+                    {/* <Ionicons name="md-arrow-undo" size={24} color="black" />
                     <Ionicons name="md-arrow-redo-sharp" size={24} color="black" />
-                    <Ionicons name="ios-star" size={24} color="black" />
+                    <Ionicons name="ios-star" size={24} color="black" /> */}
                     <MaterialIcons onPress={() => deleteMessages(selectMessages)} name="delete-outline" size={24} color="black" />
 
                 </View>
