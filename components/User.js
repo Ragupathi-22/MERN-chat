@@ -22,9 +22,9 @@ const User = ({ item }) => {
 
                 if(response.ok){
                      setFriendRequests(data);   
-                                  
+                         
                 }
-
+                
             }
             catch(error){
                 console.log("error fetching the friend requests",error)
@@ -55,7 +55,6 @@ const User = ({ item }) => {
        
 
     const sentFriendRequest=async(currentUserId,selectedUserId)=>{   
-        
         
        if(!requestSent){
 
@@ -106,7 +105,7 @@ const User = ({ item }) => {
                     style={{ backgroundColor: '#de9e4b', width: 105, padding: 10, borderTopLeftRadius: 20,borderBottomRightRadius:20 }}>
                       <Text style={{textAlign:'center',color:'white',fontSize:14}}>Friends</Text>
                   </Pressable>
-                ): requestSent || friendRequests.some((friend)=>friend.id===item._id)?(
+                ): requestSent || friendRequests.some((friend)=>friend._id===item._id)?(
                     <Pressable
                     style={{ backgroundColor: '#c26606', width: 105, padding: 10, borderRadius: 5 }}>
                       <Text style={{textAlign:'center',color:'white',fontSize:14}}>Request Sent</Text>

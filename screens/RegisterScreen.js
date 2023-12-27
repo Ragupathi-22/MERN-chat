@@ -16,6 +16,7 @@ const RegisterScreen = () => {
     const [imageUri,setImageUri]=useState('');
     const[uniqueName,setUniqueName]=useState('')
     const [fileType,setFileType]=useState('')
+    const navigator=useNavigation();
       
     // const baseUrl='https://shy-gold-salmon-toga.cyclic.app';
     // const baseUrl="http://192.168.1.157:8000"
@@ -62,7 +63,16 @@ const RegisterScreen = () => {
             if (response.ok) {
                 Alert.alert(
                     "Registration successful",
-                    "You have been registered successfully"
+                    "You have been registered successfully",
+                    [
+                        {
+                            text: "OK",
+                            onPress: () => {
+                                // Navigate to the Login screen
+                                navigation.navigate('Login'); // Assuming the screen name is 'Login'
+                            }
+                        }
+                    ]
                 );
                 setName('');
                 setEmail('');
@@ -100,6 +110,9 @@ const RegisterScreen = () => {
         } catch (error) {
             console.log("Error uploading image:", error);
         }
+
+      
+
     };
     
 

@@ -54,7 +54,6 @@ const ChatMessageScreen = () => {
     }
 
 
-
     useEffect(() => {
         const fetchRecpientData = async () => {
             try {
@@ -187,9 +186,6 @@ const ChatMessageScreen = () => {
                 }
 
             }
-
-         
-
            
     }
 
@@ -263,7 +259,12 @@ const ChatMessageScreen = () => {
     }, [recepientData, selectMessages])
 
     const formateTime = (time) => {
-        const options = { hour: 'numeric', minute: 'numeric' };
+        const options = {
+                          hour: 'numeric',
+                          minute: 'numeric',
+                          month: 'short', // or 'short' for abbreviated month names
+                          day: 'numeric'};
+
         return new Date(time).toLocaleString("en-IN", options);
     };
 
