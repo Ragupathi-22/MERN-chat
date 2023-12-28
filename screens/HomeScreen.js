@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View ,Image} from 'react-native'
 import React, { useContext, useEffect, useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons';
@@ -21,6 +21,7 @@ const HomeScreen = () => {
     const {userId,setUserId,baseUrl}=useContext(UserType);
     const [users,setUsers]=useState([])
 
+
     useLayoutEffect(() => {
         navigation.setOptions({
           headerTitle: "",
@@ -29,9 +30,13 @@ const HomeScreen = () => {
           ),
           headerRight: () => (
             <View style={{ flexDirection: "row",alignItems:"center",gap:17,marginRight:15}}>
-              <Ionicons  onPress={()=>{navigation.navigate("Chats")}} name="chatbubble-ellipses-outline" size={25} color="black" />
+              {/* <Ionicons  onPress={()=>{navigation.navigate("Chats")}} name="chatbubble-ellipses-outline" size={25} color="black" />
               <AntDesign  onPress={()=>{navigation.navigate("Friend Request")} } name="addusergroup" size={24} color="black" />
-              <EvilIcons name="user" size={33} color="black"  onPress={()=>{navigation.navigate("Profile")}}/>
+              <EvilIcons name="user" size={33} color="black"  onPress={()=>{navigation.navigate("Profile")}}/> */}
+              <Pressable onPress={() => navigation.navigate("Chats")}><Image source={require('../assets/icons8-chat-48.png')} style={{ width: 25, height: 25}} /></Pressable>
+              <Pressable onPress={() => navigation.navigate("Friend Request")} ><Image source={require('../assets/icons8-request-feedback-48.png')} style={{ width: 25, height: 25}}/></Pressable>
+              <Pressable onPress={() => navigation.navigate("Profile")}><Image source={require('../assets/icons8-checked-user-male-25.png')} style={{ width: 28, height: 28 }} /></Pressable>
+      
             </View>
           ),
         });

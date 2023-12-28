@@ -69,7 +69,7 @@ const RegisterScreen = () => {
                             text: "OK",
                             onPress: () => {
                                 // Navigate to the Login screen
-                                navigation.navigate('Login'); // Assuming the screen name is 'Login'
+                                navigation.navigate('Login'); 
                             }
                         }
                     ]

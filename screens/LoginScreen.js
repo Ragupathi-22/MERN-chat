@@ -33,7 +33,7 @@ const LoginScreen = () => {
         checkLoginStatus()
     },[])
 
-    handleLogin=()=>{
+  const handleLogin=()=>{
         const user={
             email:email,
             password:password

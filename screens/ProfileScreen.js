@@ -95,7 +95,8 @@ const ProfileScreen = () => {
 
                   <View style={{flexDirection:'row',gap:10}}>
 
-                      <Ionicons onPress={back} name="arrow-back-outline" size={28} />
+                      {/* <Ionicons onPress={back} name="arrow-back-outline" size={28} /> */}
+                      <Pressable onPress={back}><Image source={require('../assets/icons8-back-50.png')} style={{ width: 25, height: 25}}/></Pressable>
 
                       <Text style={{fontSize:25,fontWeight:'bold'}}>Profile</Text>
                   </View>
@@ -144,8 +145,8 @@ const ProfileScreen = () => {
            <View style={{flexDirection:'row',gap:8}}>
 
                   <Text style={{fontSize:20,fontWeight:'bold'}}>Log-out</Text>
-                  <AntDesign onPress={logout} name="logout" size={24} color="black" />
-                  
+                  {/* <AntDesign onPress={logout} name="logout" size={24} color="black" /> */}
+                  <Pressable onPress={logout}><Image source={require('../assets/icons8-logout-rounded-32.png')} style={{ width: 28, height: 28}}/></Pressable>
             </View>
 
        </View>
