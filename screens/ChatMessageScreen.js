@@ -440,7 +440,7 @@ const ChatMessageScreen = () => {
                     }}>
 
                 {/* <Entypo name="emoji-happy" size={24} color={'gray'} onPress={handleEmojiPress} /> */}
-                <Pressable   onPress={handleEmojiPress} ><Image source={require('../assets/8674857_ic_fluent_emoji_regular_icon.png')} style={{ width: 25, height: 25}}/></Pressable>
+                <Pressable   onPress={handleEmojiPress} ><Image source={require('../assets/happy-icon.webp')} style={{ width: 25, height: 25}}/></Pressable>
                 <TextInput
                     value={message}
                     onChangeText={(text) => { setMessage(text) }}
@@ -458,7 +458,7 @@ const ChatMessageScreen = () => {
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
 
                     {/* <EvilIcons onPress={pickImage} name="camera" size={26} color="gray" /> */}
-                    <Pressable  onPress={pickImage}><Image source={require('../assets/icons8-camera-25.png')} style={{ width: 25, height: 25}}/></Pressable>
+                    <Pressable  onPress={pickImage}><Image source={require('../assets/icons8-camera-25.png')} style={{ width: 27, height: 27}}/></Pressable>
 
                     {/* <FontAwesome5 name="microphone" size={20} color="gray" /> */}
 

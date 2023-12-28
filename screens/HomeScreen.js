@@ -35,8 +35,8 @@ const HomeScreen = () => {
               <EvilIcons name="user" size={33} color="black"  onPress={()=>{navigation.navigate("Profile")}}/> */}
               <Pressable onPress={() => navigation.navigate("Chats")}><Image source={require('../assets/icons8-chat-48.png')} style={{ width: 25, height: 25}} /></Pressable>
               <Pressable onPress={() => navigation.navigate("Friend Request")} ><Image source={require('../assets/icons8-request-feedback-48.png')} style={{ width: 25, height: 25}}/></Pressable>
-              <Pressable onPress={() => navigation.navigate("Profile")}><Image source={require('../assets/icons8-checked-user-male-25.png')} style={{ width: 28, height: 28 }} /></Pressable>
-      
+              <Pressable onPress={() => navigation.navigate("Profile")}><Image source={require('../assets/profile-picture-male-icon.webp')} style={{ width: 28, height: 28 }}  /></Pressable>
+    
             </View>
           ),
         });

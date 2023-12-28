@@ -22,3 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+//  for web build ,expo build:web
+//build for android , eas build
