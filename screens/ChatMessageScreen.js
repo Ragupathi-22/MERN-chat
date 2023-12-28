@@ -222,8 +222,8 @@ const ChatMessageScreen = () => {
             headerTitle: "",
             headerLeft: () => (
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-                    <Ionicons name="chevron-back-sharp" size={32} color="black" onPress={() => { navigation.goBack() }} />
-
+                    {/* <Ionicons name="chevron-back-sharp" size={32} color="black" onPress={() => { navigation.goBack() }} /> */}
+                    <Pressable onPress={() => { navigation.goBack() }} ><Image source={require('../assets/icons8-back-50.png')} style={{marginLeft:5, width: 25, height: 25}}/></Pressable>
                     {selectMessages.length > 0 ?
 
                         <View>
@@ -250,8 +250,9 @@ const ChatMessageScreen = () => {
                     {/* <Ionicons name="md-arrow-undo" size={24} color="black" />
                     <Ionicons name="md-arrow-redo-sharp" size={24} color="black" />
                     <Ionicons name="ios-star" size={24} color="black" /> */}
-                    <MaterialIcons onPress={() => deleteMessages(selectMessages)} name="delete-outline" size={24} color="black" />
 
+                    {/* <MaterialIcons onPress={() => deleteMessages(selectMessages)} name="delete-outline" size={24} style={{marginRight:30}} color="black" /> */}
+                    <Pressable  onPress={() => deleteMessages(selectMessages)} ><Image source={require('../assets/icons8-delete-30.png')} style={{marginRight:10, width: 25, height: 25}}/></Pressable>
                 </View>
 
                 : null
@@ -332,7 +333,7 @@ const ChatMessageScreen = () => {
                                             alignSelf: 'flex-end',
                                             backgroundColor: '#ECE5E1',
                                             padding: 8,
-                                            maxWidth: '60',
+                                            maxWidth: '60%',
                                             borderRadius: 7,
                                             margin: 10
                                         }
@@ -379,9 +380,9 @@ const ChatMessageScreen = () => {
                                         {
                                             alignSelf: 'flex-end',
                                             backgroundColor: '#128c73',
-                                            maxWidth: '60',
+                                            margin: 10,
                                             borderRadius: 7,
-                                            margin: 10
+                                            maxWidth: '60%'
                                         }
                                         : {
                                             alignSelf: 'flex-start',
@@ -438,8 +439,8 @@ const ChatMessageScreen = () => {
                         marginBottom: showEmojiSelector ? 0 : 25
                     }}>
 
-                <Entypo name="emoji-happy" size={24} color={'gray'} onPress={handleEmojiPress} />
-
+                {/* <Entypo name="emoji-happy" size={24} color={'gray'} onPress={handleEmojiPress} /> */}
+                <Pressable   onPress={handleEmojiPress} ><Image source={require('../assets/8674857_ic_fluent_emoji_regular_icon.png')} style={{ width: 25, height: 25}}/></Pressable>
                 <TextInput
                     value={message}
                     onChangeText={(text) => { setMessage(text) }}
@@ -456,9 +457,10 @@ const ChatMessageScreen = () => {
 
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
 
-                    <EvilIcons onPress={pickImage} name="camera" size={26} color="gray" />
+                    {/* <EvilIcons onPress={pickImage} name="camera" size={26} color="gray" /> */}
+                    <Pressable  onPress={pickImage}><Image source={require('../assets/icons8-camera-25.png')} style={{ width: 25, height: 25}}/></Pressable>
 
-                    <FontAwesome5 name="microphone" size={20} color="gray" />
+                    {/* <FontAwesome5 name="microphone" size={20} color="gray" /> */}
 
                 </View>
 
