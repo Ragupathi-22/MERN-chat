@@ -29,14 +29,25 @@ const HomeScreen = () => {
             <Text style={{ marginLeft: 10, fontSize: 18,fontWeight:'bold'}}>Swift Chat</Text>
           ),
           headerRight: () => (
-            <View style={{ flexDirection: "row",alignItems:"center",gap:17,marginRight:15}}>
+            <View style={{ flexDirection: "row",alignItems:"center",gap:17,marginRight:7}}>
+
               {/* <Ionicons  onPress={()=>{navigation.navigate("Chats")}} name="chatbubble-ellipses-outline" size={25} color="black" />
               <AntDesign  onPress={()=>{navigation.navigate("Friend Request")} } name="addusergroup" size={24} color="black" />
-              <EvilIcons name="user" size={33} color="black"  onPress={()=>{navigation.navigate("Profile")}}/> */}
+              <EvilIcons name="user" size={33} color="black"  onPress={()=>{navigation.navigate("Profile")}}/>
+               */}
               <Pressable onPress={() => navigation.navigate("Chats")}><Image source={require('../assets/icons8-chat-48.png')} style={{ width: 25, height: 25}} /></Pressable>
               <Pressable onPress={() => navigation.navigate("Friend Request")} ><Image source={require('../assets/icons8-request-feedback-48.png')} style={{ width: 25, height: 25}}/></Pressable>
-              <Pressable onPress={() => navigation.navigate("Profile")}><Image source={require('../assets/profile-picture-male-icon.webp')} style={{ width: 28, height: 28 }}  /></Pressable>
-    
+              <Pressable onPress={() => navigation.navigate("Profile")}>
+                    <Text style={{color:'gray',
+                                  borderWidth:1.5,
+                                  paddingHorizontal: 10,   // Horizontal padding
+                                  paddingVertical: 5,
+                                  fontWeight:'bold',
+                                  borderRadius:5,
+                                  shadowColor: '#000',shadowOffset: { width: 5, height: 3 },shadowOpacity: 0.5,shadowRadius: 2,elevation: 5,
+                                  backgroundColor:'white'
+                                  }}>Profile</Text>
+                     </Pressable>
             </View>
           ),
         });

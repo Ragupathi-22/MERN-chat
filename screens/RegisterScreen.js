@@ -19,8 +19,8 @@ const RegisterScreen = () => {
     const navigator=useNavigation();
       
     // const baseUrl='https://shy-gold-salmon-toga.cyclic.app';
-    // const baseUrl="http://192.168.1.157:8000"
-    const baseUrl='https://chat-api-gkq5.onrender.com'
+    const baseUrl="http://192.168.1.157:8000"
+    // const baseUrl='https://chat-api-gkq5.onrender.com'
 
  
     const handleRegister = async () => {

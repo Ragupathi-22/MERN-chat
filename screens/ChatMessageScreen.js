@@ -440,7 +440,8 @@ const ChatMessageScreen = () => {
                     }}>
 
                 {/* <Entypo name="emoji-happy" size={24} color={'gray'} onPress={handleEmojiPress} /> */}
-                <Pressable   onPress={handleEmojiPress} ><Image source={require('../assets/happy-icon.webp')} style={{ width: 25, height: 25}}/></Pressable>
+                {/* <Pressable onPress={handleEmojiPress}><Image source={require('../assets/icons8-smiling-face-with-halo-48.png')} style={{width: 30, height: 30}}/></Pressable> */}
+
                 <TextInput
                     value={message}
                     onChangeText={(text) => { setMessage(text) }}

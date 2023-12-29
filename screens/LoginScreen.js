@@ -11,8 +11,8 @@ const LoginScreen = () => {
     const [password, setPassword] = useState("");
     const navigation=useNavigation();
     // const baseUrl='https://shy-gold-salmon-toga.cyclic.app';
-    // const baseUrl="http://192.168.1.157:8000"
-    const baseUrl='https://chat-api-gkq5.onrender.com'
+    const baseUrl="http://192.168.1.157:8000"
+    // const baseUrl='https://chat-api-gkq5.onrender.com'
 
     useEffect( ()=>{
         const checkLoginStatus=async()=>{
